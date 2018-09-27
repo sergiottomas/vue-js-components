@@ -1,7 +1,5 @@
 export default {
-  listaTarefas: estado => {
-    let lista = estado.tarefas.slice();
-
-    return lista.reverse();
+  getNome(contexto) {
+    return contexto.appName;
   }
 }

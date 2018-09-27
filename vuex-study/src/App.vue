@@ -1,16 +1,26 @@
 <template>
   <div id="app">
+    <h1>{{ appName }}</h1>
     <add-tarefa></add-tarefa>
+    <tarefas></tarefas>
   </div>
 </template>
 
 <script>
 
-import AddTarefa from './add-tarefa.vue'
+import AddTarefa from './add-tarefa.vue';
+import tarefas from "./tarefas.vue";
+import es6Promise from "es6-promise";
+import {mapState} from 'vuex';
+
+es6Promise.polyfill();
 
 export default {
   name: 'app',
-  components: {AddTarefa}
+  components: {AddTarefa, tarefas},
+  computed: {
+    ...mapState(['appName'])
+  }
 }
 </script>
 
@@ -34,7 +44,7 @@ ul {
 }
 
 li {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
 }
 
