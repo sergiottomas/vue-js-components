@@ -1,3 +1,4 @@
 export default {
-  tarefas: []
+  tarefas: [],
+  appName: 'Teste'
 }

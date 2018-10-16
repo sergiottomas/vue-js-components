@@ -1,3 +1,3 @@
 export default {
-  appName: "Vuex with Vue.js"
+  appNamA: "Vuex with Vue.js"
 }
